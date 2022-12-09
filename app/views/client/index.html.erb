@@ -1,8 +1,54 @@
-<ul>
-  <% @clients.each do |client| %>
-    <li>
-      <%= client.username %>
-      <%= client.password %>
-    </li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      body {
+        background: #87CEFA;
+      }
+      ul, li, p {
+        list-style-type: none;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+      }
+      .username {
+        border: 3px solid black;
+        float:left;
+        width: 50%;
+      }
+      .password {
+        border: 3px solid black;
+      }
+      .table {
+        max-width:50%;
+        margin: auto;
+        margin-top: 10%;
+        background: #D8E6F3;
+      }
+      .heder {
+        background: #AFCDE7;
+      }
+
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="table">
+      <div class="username heder">
+      <p>Username</p>
+        </div>
+      <div class="password heder">
+      <p>Password</p>
+        </div>
+    <% @clients.each do |client| %>
+    <div class="username">
+      <p><%= client.username %></p>
+      </div>
+          <div class="password">
+        <p><%= client.password %></p>
+        </div>
+    <% end %>
+</div>
+  </body>
+</html>
